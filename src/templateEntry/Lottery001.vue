@@ -14,7 +14,7 @@ export default {
     HelloWorld,
   },
   mounted() {
-    console.log(`i\'m ${this.$options.name}`);
+    console.log(`I'm ${this.$options.name}`);
   },
 };
 </script>
