@@ -49,9 +49,9 @@ const questions = [
   ls.stdout.on('data', data => {
     console.log(`${data}`);
   });
-  // ls.stderr.on('data', data => {
-  //   console.log(`${data}`);
-  // });
+  ls.stderr.on('data', data => {
+    console.log(`${data}`);
+  });
   ls.on('close', code => {
     console.log(chalk.red('[ERROR CODE]:'), code);
   });
