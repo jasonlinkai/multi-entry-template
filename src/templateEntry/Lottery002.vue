@@ -13,6 +13,9 @@ export default {
   components: {
     HelloWorld,
   },
+  mounted() {
+    console.log(`i\'m ${this.$options.name}`);
+  },
 };
 </script>
 

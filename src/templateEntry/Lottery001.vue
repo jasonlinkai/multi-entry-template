@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="lottery001"/>
+    <img alt="Vue logo" src="../assets/logo.png" />
+    <HelloWorld msg="lottery001" />
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+  mounted() {
+    console.log(`i\'m ${this.$options.name}`);
+  },
+};
 </script>
 
 <style>

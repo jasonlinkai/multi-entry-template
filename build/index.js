@@ -22,7 +22,7 @@ const schema = {
     VUE_APP_TEMPLATE_NUMBER: {
       description: '输入模板编号 ex: 001、002',
       validator: /^[\d]{3}$/,
-      message: '请重新输入，001、002⋯其一!',
+      message: '请重新输入，001、002⋯等!',
       default: '001',
       requried: true,
     },
@@ -36,21 +36,23 @@ prompt.get(schema, function (err, result) {
     process.exit(1);
   } else {
     const { VUE_APP_PLAT_ID, VUE_APP_TEMPLATE_TYPE, VUE_APP_TEMPLATE_NUMBER } = result;
-    console.log(chalk.green('[站点ID]:'), VUE_APP_PLAT_ID);
-    console.log(chalk.green('[模板类型]:'), VUE_APP_TEMPLATE_TYPE);
-    console.log(chalk.green('[模板编号]:'), VUE_APP_TEMPLATE_NUMBER);
+
+    console.log(chalk.green('[PLAT_ID]:'), VUE_APP_PLAT_ID);
+    console.log(chalk.green('[TEMPLATE_TYPE]:'), VUE_APP_TEMPLATE_TYPE);
+    console.log(chalk.green('[TEMPLATE_NUMBER]:'), VUE_APP_TEMPLATE_NUMBER);
 
     const command = argv.c || 'serve';
     const env = {
       ...result,
       PATH: process.env.PATH,
     };
+
     const ls = spawn(`vue-cli-service`, [command, '--color'], { env });
     ls.stdout.on('data', data => {
       console.log(`${data}`);
     });
     ls.on('close', code => {
-      console.log(chalk.red('[错误码]:'), code);
+      console.log(chalk.red('[ERROR CODE]:'), code);
     });
   }
 });
