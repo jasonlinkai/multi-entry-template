@@ -1,8 +1,6 @@
-const { VUE_APP_PLAT_ID, VUE_APP_TEMPLATE_TYPE, VUE_APP_TEMPLATE_NUMBER } = process.env;
-const TEMPLATE = VUE_APP_TEMPLATE_TYPE + VUE_APP_TEMPLATE_NUMBER;
+const { VUE_APP_TEMPLATE_TYPE, VUE_APP_TEMPLATE_NUMBER } = process.env;
 
-console.log('[PLAT]', VUE_APP_PLAT_ID);
-console.log('[TEMPLATE]', TEMPLATE);
+const TEMPLATE = VUE_APP_TEMPLATE_TYPE + VUE_APP_TEMPLATE_NUMBER;
 
 module.exports = {
   configureWebpack: config => {
