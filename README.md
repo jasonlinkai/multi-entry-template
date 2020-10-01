@@ -1,29 +1,11 @@
 # multi-entry-template
 
-## Project setup
+You can use this when building a single library and multi-template project to reduce unnecessary compilation time for you.
 
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
+The question version is currently available, and it will support loading JSON format for configuration in the future.
 
-```
-npm run serve
-```
+1. npm install
+2. npm run serve/build
 
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Just follow propmts, enjoy! 
