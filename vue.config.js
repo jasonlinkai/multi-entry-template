@@ -6,10 +6,12 @@ const USETCENTRE_TERMPLATE_NUMBER = VUE_APP_USERCENTRE_TEMPLATE_NUMBER;
 const VIEWS_TEMPLATE_PATH = `@/views/${TEMPLATE}`;
 const VIEWS_USERCENTRE_PATH = `@/views/UserCentre${USETCENTRE_TERMPLATE_NUMBER}`;
 
+console.log(chalk.cyan('<========== vue.config.js ==========>'));
 console.log(chalk.green('[TEMPLATE]:'), TEMPLATE);
 console.log(chalk.green('[USETCENTRE_TERMPLATE_NUMBER]:'), USETCENTRE_TERMPLATE_NUMBER);
 console.log(chalk.green('[VIEWS_TEMPLATE_PATH]:'), VIEWS_TEMPLATE_PATH);
 console.log(chalk.green('[VIEWS_USERCENTRE_PATH]:'), VIEWS_USERCENTRE_PATH);
+console.log(chalk.cyan('<========== vue.config.js ==========>'));
 
 module.exports = {
   configureWebpack: config => {
